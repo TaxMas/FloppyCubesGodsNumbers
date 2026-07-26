@@ -9,3 +9,11 @@ First, it generates every position that can be reached in one move from the solv
 At each depth, only new positions that have not been discovered before are added. This guarantees that every position is assigned its shortest possible distance from the solved state.
 
 Eventually, the algorithm reaches a depth at which no new positions can be generated. At that point, every reachable state has already been explored, so the search stops. The last depth that produced new positions is the God Number for the chosen puzzle and move metric.
+
+# Progress indicator
+
+Since the 1×5×5 cube has a much larger state space than the other puzzles, its computation can take a considerable amount of time.
+
+To make the execution easier to monitor, the program includes a simple progress indicator that reports the estimated completion percentage in 10% increments.
+
+Please note that this percentage only reflects the progress of the main search. Once it reaches 100%, the program still requires some additional time to verify that no new states can be generated. Therefore, the computation is not necessarily finished as soon as the progress indicator reaches 100%.
