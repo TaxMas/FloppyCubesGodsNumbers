@@ -1,5 +1,11 @@
-# Welcome to GitHub Desktop!
+# God Numbers for 1×3×3, 1×4×4, and 1×5×5 Rubik's Cubes
 
-This is your README. READMEs are where you can communicate what your project is and how to use it.
+This repository contains Python programs used to compute the God Numbers of the 1×3×3, 1×4×4, and 1×5×5 Rubik's Cubes under different move metrics.
 
-Write your name on line 6, save it, and then head back to GitHub Desktop.
+The program starts from the solved state of the puzzle and performs a breadth-first search (BFS) through the state space.
+
+First, it generates every position that can be reached in one move from the solved state. Then, it generates all previously unseen positions that can be reached in two moves, followed by those at three moves, and so on.
+
+At each depth, only new positions that have not been discovered before are added. This guarantees that every position is assigned its shortest possible distance from the solved state.
+
+Eventually, the algorithm reaches a depth at which no new positions can be generated. At that point, every reachable state has already been explored, so the search stops. The last depth that produced new positions is the God Number for the chosen puzzle and move metric.
