@@ -1,6 +1,6 @@
 class Floppy:
     def __init__(self, scramble = []):
-        # Van por la forma de escribir (de izquierda a derecha, y de aarriba a abajo) si miras esa cara de frente
+        # Van por la forma de escribir (de izquierda a derecha, y de arriba a abajo) si miras esa cara de frente
         self.U = [0]*9 # White
         self.D = [1]*9 # Yellow
         # Van de izquierda a derecha si miras esa cara de frente
